@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family:Arial;background:#0f172a;color:white}
+.container{max-width:1000px;margin:auto}
+table{width:100%;background:#1e293b}
+td,th{padding:8px}
+a{color:#60a5fa}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>📒 Agenda</h1>
+
+<a href="/agregar">➕ Nuevo</a>
+<a href="/exportar">📊 Excel</a>
+<a href="/listar">🖨️ Imprimir</a>
+
+<form>
+<input name="q" placeholder="Buscar">
+<input name="institucion" placeholder="Institución">
+<input name="localidad" placeholder="Localidad">
+<button>Filtrar</button>
+</form>
+
+<table>
+<tr><th>Apellido</th><th>Nombre</th><th></th></tr>
+
+{% for c in contactos %}
+<tr>
+<td><a href="/ver/{{c[0]}}">{{c[1]}}</a></td>
+<td>{{c[2]}}</td>
+<td>
+<a href="/editar/{{c[0]}}">✏️</a>
+<a href="/eliminar/{{c[0]}}">❌</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+</body>
+</html>
