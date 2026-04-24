@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+Flask
+gunicorn
+pandas
+=======
+Flask
+gunicorn
+pandas
+>>>>>>> 9c580488ab3623f7fe029f64ee86dc3121b425b3
+openpyxl
